@@ -4,10 +4,12 @@ import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
+import { ListBox } from 'primereact/listbox';
+import { Divider } from 'primereact/divider';
+import { Sidebar } from 'primereact/sidebar';
 import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
-import { Sidebar } from 'primereact/sidebar';
 
 const App = () => {
   const [cep, setCep] = useState('');
@@ -106,13 +108,14 @@ const App = () => {
         <i className='pi pi-clock mx-1'></i>
         {currentDate.toLocaleString()}
       </p>
-      <form className='container-sm d-flex flex-row justify-content-center mt-3 p-1' onSubmit={handleSubmit}>
+      <form className='container-sm d-flex flex-row justify-content-center my-3 p-1' onSubmit={handleSubmit}>
         <span className="p-float-label">
           <InputText id="cep" className='me-1' value={cep} onChange={handleInputChange} required />
           <label htmlFor="cep">Digite o CEP</label>
         </span>
         <Button className="ms-1" label="Consultar" severity='success' icon="pi pi-search" />
       </form>
+      <Divider/>
       {error && <p>{error}</p>}.
       {Object.keys(address).length > 0 && (
         <div className='container-sm d-flex flex-column flex-lg-row justify-content-evenly align-items-top'>
@@ -137,11 +140,15 @@ const App = () => {
           {lastQueries.length > 0 && (
             <div className='mt-3 p-3 d-flex flex-column align-items-center'>
               <h4>Últimas consultas:</h4>
-              {lastQueries.map((query, index) => (
-                <p key={index} className='m-0 py-1'>
-                  <strong>CEP:</strong> {query.cep} - {query.dateTime.toLocaleString()}
-                </p>
-              ))}
+              <ListBox
+                options={lastQueries.map((query) => ({
+                  ...query,
+                  label: `${query.cep} - ${query.dateTime.toLocaleString()}`
+                }))}
+                optionLabel="label"
+                className="p-m-0 rounded"
+                disabled
+              />
             </div>
           )}
         </div>
