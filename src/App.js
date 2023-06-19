@@ -102,8 +102,8 @@ const App = () => {
   }, []);
 
   return (
-    <div id="consulta" className='container-sm rounded border border-1 shadow-sm mx-auto my-2 py-5 d-flex flex-column align-items-center'>
-      <h2>Consulta de CEP</h2>
+    <div id="consulta" className='container-sm rounded border border-1 shadow-sm my-2 py-5 px-0 d-flex flex-column align-items-center'>
+      <h2><strong>Consulta de CEP</strong></h2>
       <p className='d-flex flex-row align-items-center'>
         <i className='pi pi-clock mx-1'></i>
         {currentDate.toLocaleString()}
@@ -198,7 +198,7 @@ const App = () => {
       </Sidebar>
       {savedData.length > 0 && (
         <>
-          <h5>Endereços Salvos</h5>
+          <h5 className='mt-5'>Endereços Salvos</h5>
           <DataTable
             value={savedData}
             className="m-auto"

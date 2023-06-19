@@ -9,7 +9,10 @@
   --primary: #2C9FBA;
   --font-color: #333;
 }
-body{
+body, #root{
+  margin: 0;
+  padding: 0;
+  width: 100vw;
   min-height: 100vh;
   font-family: 'IBM Plex Sans', sans-serif !important;
   background: linear-gradient(to bottom right, var(--body-color), var(--body-color-3)) !important;
