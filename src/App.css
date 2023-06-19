@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 
 :root{
   --body-color: #009c3b;
   --body-color-2: #ffdf00;
+  --body-color-3: #002776;
   --border: #ccc;
   --bg-color: #fff;
   --primary: #2C9FBA;
@@ -10,8 +11,8 @@
 }
 body{
   min-height: 100vh;
-  font-family: 'Poppins', sans-serif !important;
-  background: linear-gradient(to bottom right, var(--body-color), var(--body-color-2)) !important;
+  font-family: 'IBM Plex Sans', sans-serif !important;
+  background: linear-gradient(to bottom right, var(--body-color), var(--body-color-3)) !important;
 }
 
 #consulta{
