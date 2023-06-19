@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+  --body-color: #aaf663;
+  --body-color-2: #92edbd;
+  --border: #ccc;
+  --bg-color: #fff;
+  --primary: #2C9FBA;
+  --font-color: #333;
+  --font-color-disabled: #ddd;
+  --border-color-disabled: #eeeeee55;
+  --red-color: #d00;
+  --red-color-hover: #f00;
+  --incorreta: #FF5948;
+  --green-color: #05D96B;
+  --green-color-hover: #34a061;
+  --green-color-border: #01D863;
+  --bg-color-incorreta: #FFDFDC;
+}
+body{
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif !important;
+  background: linear-gradient(to bottom right, var(--body-color), var(--body-color-2)) !important;
+  /* background: url(../public/data/images/background.png);
+  background-size: cover;
+  background-repeat: no-repeat; */
+}
+#consulta{
+  background-color: #f5f5f599;
+}
+
+@media (hover: hover) {
+  button:hover{
+    background-color: var(--green-color);
+  }
+}
