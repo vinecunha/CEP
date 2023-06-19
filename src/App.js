@@ -100,17 +100,20 @@ const App = () => {
   }, []);
 
   return (
-    <div id="consulta" className='container-sm rounded border border-1 shadow-sm my-3 py-5 d-flex flex-column align-items-center'>
+    <div id="consulta" className='container-sm rounded border border-1 shadow-sm mx-auto my-2 py-5 d-flex flex-column align-items-center'>
       <h2>Consulta de CEP</h2>
       <p className='d-flex flex-row align-items-center'>
         <i className='pi pi-clock mx-1'></i>
         {currentDate.toLocaleString()}
       </p>
       <form className='container-sm d-flex flex-row justify-content-center mt-3 p-1' onSubmit={handleSubmit}>
-        <InputText className='me-1' value={cep} placeholder='Digite o CEP' onChange={handleInputChange} autoFocus required />
+        <span className="p-float-label">
+          <InputText id="cep" className='me-1' value={cep} onChange={handleInputChange} required />
+          <label htmlFor="cep">Digite o CEP</label>
+        </span>
         <Button className="ms-1" label="Consultar" severity='success' icon="pi pi-search" />
       </form>
-      {error && <p>{error}</p>}
+      {error && <p>{error}</p>}.
       {Object.keys(address).length > 0 && (
         <div className='container-sm d-flex flex-column flex-lg-row justify-content-evenly align-items-top'>
           <div className='mt-3 p-3 '>
@@ -147,14 +150,14 @@ const App = () => {
       <Sidebar visible={showSidebar} onHide={() => setShowSidebar(false)}>
         <h5 className='mb-5'><strong>Complete o endereço</strong></h5>
         <form onSubmit={(e) => e.preventDefault()}>
-          <div className="mb-3">
-            <label htmlFor="numberInput" className="form-label m-0">Número:</label>
+          <span className="p-float-label">
             <InputText  className="form-control" id="numberInput" value={numero} onChange={handleNumberChange} autoFocus required />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="complementInput" className="form-label m-0">Complemento:</label>
+            <label htmlFor="numberInput"> Número:</label>
+          </span>
+          <span className="p-float-label my-4">
             <InputText className="form-control" id="complementInput" value={complemento} onChange={handleComplementChange} />
-          </div>
+            <label htmlFor="complementInput">Complemento:</label>
+          </span>
           <Button className='me-1' label='Salvar' severity='success' icon="pi pi-save" onClick={saveData}/>
           <Button className='ms-1' label='Cancelar' severity='danger' icon="pi pi-times" onClick={() => setShowSidebar(false)}/>
         </form>
@@ -194,6 +197,7 @@ const App = () => {
             className="m-auto"
           >
             <Column field="cep" header="CEP" />
+            <Column field="uf" header="Estado" />
             <Column body={rowData => <Button label='Visualizar' icon="pi pi-file" onClick={() => { setAddress(rowData); setShowSidebarView(true); }}/>} />
           </DataTable>
         </>
