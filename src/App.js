@@ -89,6 +89,7 @@ const App = () => {
       complemento: complemento,
     }));
     setShowSidebar(false);
+    navigator.vibrate(1000)
   };
 
   useEffect(() => {

@@ -10,12 +10,10 @@
   --font-color: #333;
 }
 body, #root{
-  margin: 0;
-  padding: 0;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   font-family: 'IBM Plex Sans', sans-serif !important;
-  background: linear-gradient(to bottom right, var(--body-color), var(--body-color-3)) !important;
+  background: linear-gradient(to bottom, var(--body-color), var(--body-color-3)) !important;
 }
 
 #consulta{
