@@ -89,7 +89,7 @@ const App = () => {
       complemento: complemento,
     }));
     setShowSidebar(false);
-    navigator.vibrate(1000)
+    navigator.vibrate(200)
   };
 
   useEffect(() => {
@@ -120,7 +120,7 @@ const App = () => {
       {error && <p>{error}</p>}.
       {Object.keys(address).length > 0 && (
         <div className='container-sm d-flex flex-column flex-lg-row justify-content-evenly align-items-top'>
-          <div className='mt-3 p-3 '>
+          <div className='mt-3 p-3'>
             <p className='m-0'>
               <strong>CEP:</strong> {address.cep}
             </p>
@@ -136,7 +136,7 @@ const App = () => {
             <p className='m-0'>
               <strong>Estado:</strong> {address.uf}
             </p>
-            <Button label="Salvar Endereço" icon="pi pi-save" className="p-button-primary mt-2" onClick={() => setShowSidebar(true)} />
+            <Button label="Salvar Endereço" icon="pi pi-save" className="w-100 p-button-primary mt-2" onClick={() => setShowSidebar(true)} />
           </div>
           {lastQueries.length > 0 && (
             <div className='mt-3 p-3 d-flex flex-column align-items-center'>
