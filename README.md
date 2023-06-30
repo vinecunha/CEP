@@ -48,3 +48,5 @@ npm start
 - O aplicativo utiliza a API pública ViaCEP para obter as informações dos endereços.
 
 Espero que esta informação seja útil para você. Se tiver mais alguma dúvida, fique à vontade para perguntar.
+
+Veja mais em: https://vinecunha-cep.netlify.app
