@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 
 :root{
-  --body-color: #009c3b;
-  --body-color-2: #ffdf00;
+  --body-color: #185003;
+  --body-color-2: #084001;
   --body-color-3: #002776;
   --border: #ccc;
   --bg-color: #fff;
@@ -13,7 +13,7 @@ body, #root{
   width: 100%;
   min-height: 100vh;
   font-family: 'IBM Plex Sans', sans-serif !important;
-  background: linear-gradient(to bottom, var(--body-color), var(--body-color-3)) !important;
+  background: linear-gradient(to bottom, var(--body-color), var(--body-color-2)) !important;
 }
 
 #consulta{

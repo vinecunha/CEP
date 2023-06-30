@@ -103,13 +103,13 @@ const App = () => {
   }, []);
 
   return (
-    <div id="consulta" className='container-sm rounded border border-1 shadow-sm my-2 py-5 px-0 d-flex flex-column align-items-center'>
+    <div id="consulta" style={{maxWidth: '90vw'}} className='rounded border border-1 shadow-sm mt-5 mx-auto py-5 px-0 d-flex flex-column align-items-center'>
       <h2><strong>Consulta de CEP</strong></h2>
       <p className='d-flex flex-row align-items-center'>
         <i className='pi pi-clock mx-1'></i>
         {currentDate.toLocaleString()}
       </p>
-      <form className='container-sm d-flex flex-row justify-content-center my-3 p-1' onSubmit={handleSubmit}>
+      <form className='w-100 d-flex flex-row justify-content-center my-3 p-1' onSubmit={handleSubmit}>
         <span className="p-float-label">
           <InputText id="cep" className='me-1' value={cep} onChange={handleInputChange} required />
           <label htmlFor="cep">Digite o CEP</label>

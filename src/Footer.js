@@ -3,7 +3,7 @@ import './Footer.css';
 
 export default function Footer() {
     return (
-        <div className="position-relative bottom-0 container-sm rounded text-white">            
+        <div className="position-relative bottom-0 mt-3 container-sm rounded text-white">            
             <p className='text-center m-0'>Developed by @vinecunha with PrimeReact and Bootstrap</p>
             <div className="d-flex flex-row justify-content-center align-items-center mb-1">
                 <a href='https://vinecunha.github.io' className='mx-1 text-white' style={{textDecoration: "none"}} target='blank'>vinecunha.github.io</a> |
